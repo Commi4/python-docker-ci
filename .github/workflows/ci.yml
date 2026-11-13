@@ -1,3 +1,4 @@
+cat << 'EOF' > .github/workflows/ci.yml
 name: Docker Build Check
 
 on: [push]
@@ -5,13 +6,13 @@ on: [push]
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Download code from repository
-       uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Check syntax python
-       run: python3 -m py_compile main.py
+        run: python3 -m py_compile main.py
 
       - name: Testing the Docker image build
-       run: docker build -t my-python-parser .
+        run: docker build -t my-python-parser .
+EOF
