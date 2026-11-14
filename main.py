@@ -7,4 +7,3 @@ while True:
 	print(f"[{counter}] Работаю... Собираю данные с сайта...", flush=True)
 	time.sleep(3)
 	counter +=1
-print("Broken code missing a closing parenthesis"
